@@ -1,0 +1,43 @@
+body
+{
+    margin: 0 ; 
+    padding: O; 
+    background: #262626;
+}
+.cup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 180px;
+    border: 6px solid #fff;
+    border-top: 2px solid transparent;
+    border-radius: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: url(water.png);
+ 
+    background-size: cover;
+    box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.8), 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cup.animate {
+    animation: animate 10s linear infinite;
+    background-position: 100px 0px; /* Position de départ pour la tasse remplie */
+}
+
+@keyframes animate {
+    0% {
+        background-position: 2000px -80px;
+    }
+    20% {
+        background-position: 1000px -70px;
+    }
+    60% {
+        background-position: 0 100px;
+    }
+    100% {
+        background-position: 0 100px;
+    }
+}
