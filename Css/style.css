@@ -1,6 +1,6 @@
 body
 {
-    margin: 0 ; 
+    margin: 0; 
     padding: O; 
     background: #262626;
 }
@@ -17,15 +17,24 @@ body
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background: url(water.png);
- 
+    background-repeat: repeat-x ;
     background-size: cover;
-    box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.8), 0 10px 20px rgba(0, 0, 0, 0.4);
+    animation: animate 10s linear infinite;
+    box-shadow: 0 0 0 6px 0 20px 35px rgba(0,0, 0, 1);
+}
+.cup:before
+{
+    content : ''; 
+    position : absolute; 
+    width : 50px; 
+    height : 80px ; 
+    border : 6px solid #fff ; 
+    right : -68px ; 
+    top : 30px ; 
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
 }
 
-.cup.animate {
-    animation: animate 10s linear infinite;
-    background-position: 100px 0px; /* Position de départ pour la tasse remplie */
-}
 
 @keyframes animate {
     0% {
@@ -41,3 +50,17 @@ body
         background-position: 0 100px;
     }
 }
+
+.button-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  #start-button {
+    margin-right: 10px;
+  }
+  
+  .counter {
+    font-weight: bold;
+  }
+  
